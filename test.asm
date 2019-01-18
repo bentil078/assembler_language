@@ -1,0 +1,25 @@
+.ORIG x3000
+
+AND R0, R0, #0
+AND r1, R1, #0
+AND R2, R2, #0
+
+ADD R1, R1, #4
+
+ADD R2, R2, #15
+
+LD R3, NUMBER
+
+ADD R0, R1, R2
+
+LD R4, A
+LD R5, B
+
+ADD R0, R4, R5
+TRAP x21
+
+HALT
+NUMBER .FILL #16
+A .FILL #25
+B .FILL #36
+.END
